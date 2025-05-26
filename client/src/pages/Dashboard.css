@@ -1,0 +1,27 @@
+/* Dashboard.css */
+.description {
+  background: rgb(255, 255, 255, 0.8);
+  font-weight: 300;
+}
+
+/* Stil comun pentru card-uri */
+.plan-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+.plan-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Asigură înălțimea uniformă */
+.plan-card .card-body {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Listă de puncte mai atrăgătoare */
+.plan-card ul li {
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}

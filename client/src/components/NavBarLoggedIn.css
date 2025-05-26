@@ -1,0 +1,23 @@
+/* src/components/NavbarLoggedIn.css */
+
+/* Titlu */
+.sidebar-title {
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Link-uri */
+.nav-link {
+  color: #adb5bd;
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+  text-decoration: none;
+}
+.nav-link.active,
+.nav-link:hover {
+  color: white;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  padding: 0.4rem;
+}

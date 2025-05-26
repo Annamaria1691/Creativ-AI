@@ -1,0 +1,143 @@
+.gallery-card {
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.gallery-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-img-top {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+
+.card-body {
+  background: #f8f9fa;
+  text-align: center;
+  padding: 10px;
+}
+
+.btn-outline-secondary {
+  transition: all 0.3s ease;
+}
+
+.btn-outline-secondary:hover {
+  background-color: #6c757d;
+  color: #ffffff;
+}
+
+/* Stilizare pop-up ajustată */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  position: relative;
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  max-width: 600px; /* Lățime maximă mai mică */
+  width: fit-content; /* Se ajustează la conținut */
+  max-height: 90vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.modal-image {
+  width: auto; /* Lățimea naturală a imaginii */
+  max-width: 100%; /* Nu depășește pop-up-ul */
+  max-height: 60vh; /* Redus pentru a lăsa spațiu detaliilor */
+  object-fit: contain;
+  margin-bottom: 15px;
+  border-radius: 5px;
+}
+
+.modal-details {
+  text-align: center;
+  width: 100%;
+}
+
+.modal-details h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.modal-details p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 0px;
+  right: 1px;
+  cursor: pointer;
+  background-color: rgb(169, 169, 169, 0);
+  border: none;
+}
+
+.close-btn:hover {
+  color: #ff0000;
+}
+
+@media (max-width: 768px) {
+  .card-img-top {
+    height: 150px;
+  }
+
+  .col-sm-6.col-md-4.col-lg-3 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  .modal-content {
+    max-width: 90%;
+    padding: 10px;
+  }
+
+  .modal-image {
+    max-height: 50vh;
+  }
+}
+
+@media (max-width: 576px) {
+  .card-img-top {
+    height: 120px;
+  }
+
+  .col-sm-6.col-md-4.col-lg-3 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .modal-content {
+    padding: 10px;
+  }
+
+  .modal-details h3 {
+    font-size: 1.2rem;
+  }
+
+  .modal-details p {
+    font-size: 0.9rem;
+  }
+}

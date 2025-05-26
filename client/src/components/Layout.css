@@ -1,0 +1,69 @@
+/* src/components/Layout.css */
+
+.app-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebar (stânga pe desktop, sus pe mobil) */
+.sidebar {
+  flex: 0 0 240px;
+  background: #343a40;
+  color: white;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+/* Main content (dreapta pe desktop, dedesubt pe mobil) */
+.main-content {
+  flex: 1;
+  padding: 1.5rem;
+  background: linear-gradient(
+    90deg,
+    rgba(75, 50, 110, 0.9) 0%,
+    rgba(150, 120, 180, 0.7) 50%,
+    rgba(200, 190, 220, 0.5) 100%
+  );
+  min-height: 100vh;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+/* Titlu sidebar */
+.sidebar-title {
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Link-uri din sidebar */
+.nav-link {
+  display: block;
+  color: #adb5bd;
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+  text-decoration: none;
+  padding: 0.4rem 0.6rem;
+  border-radius: 4px;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: white;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Pe ecrane sub 768px, sidebar devine full-width deasupra */
+@media (max-width: 767px) {
+  .app-container {
+    flex-direction: column;
+  }
+  .sidebar {
+    width: 100%;
+    flex: none;
+    min-height: auto;
+  }
+  .main-content {
+    margin-top: 1rem;
+  }
+}
